@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking — fa — KARWAN E MARHABA TRAVEL &amp; TOURS</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#0f3d37;--green-mid:#22756a;--green-light:#d6ece9;--gold:#c9a227;--purple:#4a1d8c;--navy:#1a3a7a;--ink:#1a1a1a;--ink-2:#444;--ink-3:#7a8a86;--bg:#faf7ef;--paper:#fff;--border:#e3ddc9}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;display:flex;justify-content:center;padding:32px 16px 60px}
+.stub{width:100%;max-width:520px}
+.card{background:var(--paper);border-radius:14px;box-shadow:0 10px 40px rgba(15,61,55,.12);overflow:hidden;border:1px solid var(--border)}
+.head{background:var(--green);color:#fff;padding:24px 24px 20px;text-align:center}
+.crest{width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;overflow:hidden}
+.crest svg{width:30px;height:30px;color:#fff}
+.crest img{width:100%;height:100%;object-fit:cover}
+.agency{font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem}
+.addr{font-size:.72rem;opacity:.78;margin-top:4px;line-height:1.5}
+.status-pill{display:inline-block;margin-top:12px;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 14px;border-radius:20px;background:var(--gold);color:#3a2c06}
+.body{padding:26px 24px 8px}
+.greet{font-family:'Amiri',serif;color:var(--green);font-size:1.05rem;margin-bottom:4px}
+.lead{font-size:.84rem;color:var(--ink-2);line-height:1.6;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px;margin-bottom:22px}
+.item .k{font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:3px}
+.item .v{font-size:.94rem;font-weight:600}
+.sechead{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin:22px 0 10px;display:flex;align-items:center;gap:8px}
+.sechead::after{content:'';flex:1;height:1px;background:var(--border)}
+.ptable{width:100%;border-collapse:collapse;margin-bottom:16px;font-size:.8rem}
+.ptable th{background:var(--green);color:#fff;padding:7px 8px;text-align:left;font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.ptable th:first-child{border-radius:6px 0 0 0}.ptable th:last-child{border-radius:0 6px 0 0}
+.ptable td{padding:7px 8px;border-bottom:1px solid var(--border);color:var(--ink-2)}
+.ptable tr:nth-child(even) td{background:#f7f4ea}
+.ppno{font-family:monospace;font-weight:700;color:var(--ink);letter-spacing:.05em}
+.seg{background:#f7f4ea;border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+.seg.mad{background:#fdf6e8;border-color:#e8d8b0}
+.seg.trn{background:#eef0f8;border-color:#c5cae8}
+.seg-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;flex-wrap:wrap;gap:6px}
+.seg-hotel{font-weight:600;font-size:.92rem}
+.seg-city{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:2px 8px;border-radius:10px}
+.seg-city.mak{background:#d6ece9;color:#1a5c52}
+.seg-city.mad-c{background:#fdf0d6;color:#7a5010}
+.seg-city.trn-c{background:#dde2f5;color:#2c3e6b}
+.seg-rows{display:flex;gap:16px;flex-wrap:wrap;font-size:.78rem;color:var(--ink-2)}
+.seg-rows b{color:var(--ink);font-weight:600}
+/* Flight styling - simple table */
+.flight-wrap{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:16px}
+.flight-block{border:1.5px solid var(--ink);border-radius:6px;overflow:hidden}
+.flabel{font-size:.8rem;font-weight:700;text-align:center;padding:8px;background:#f0f0f0;border-bottom:1.5px solid var(--ink)}
+.ftable{width:100%;border-collapse:collapse;font-size:.76rem}
+.ftable th{padding:7px 9px;text-align:left;font-weight:700;border-bottom:1.5px solid var(--ink);border-right:1px solid #ccc}
+.ftable th:last-child{border-right:none}
+.ftable td{padding:7px 9px;border-right:1px solid #ccc;font-family:monospace;font-weight:600;color:var(--ink)}
+.ftable td:last-child{border-right:none}
+.ftable tr+tr td{border-top:1px solid #e3e3e3}
+@media(min-width:481px){.flight-wrap{grid-template-columns:1fr 1fr}}
+/* Contact */
+.contact-dual{display:grid;grid-template-columns:1fr;gap:10px;margin:18px 0}
+.contact-card{border-radius:10px;padding:12px 16px}
+.mak-card{background:var(--green-light)}
+.mad-card{background:#fdf0d6}
+.c-lbl{font-size:.62rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);margin-bottom:3px}
+.c-name{font-size:.88rem;font-weight:700;color:var(--green);margin-bottom:2px}
+.mad-card .c-name{color:#7a5010}
+.c-num{font-size:.96rem;font-weight:700;color:var(--green)}
+.mad-card .c-num{color:#7a5010}
+.terms{padding-left:18px;margin-bottom:6px}
+.terms li{font-size:.76rem;color:var(--ink-2);line-height:1.6;margin-bottom:5px}
+.foot{padding:18px 24px 24px;text-align:center}
+.foot .closing{font-family:'Playfair Display',serif;font-style:italic;color:var(--ink-2);font-size:.88rem}
+.foot .closing2{font-size:.78rem;color:var(--ink-3);margin-top:4px;font-style:italic}
+.verify{margin-top:18px;font-size:.68rem;color:var(--ink-3);letter-spacing:.03em}
+.verify b{color:var(--green)}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.seg-rows{gap:10px}.ptable{font-size:.72rem}.flight-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="stub">
+  <div class="card">
+    <div class="head">
+      <div class="crest"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="1.3"/><circle cx="32" cy="22" r="6" stroke="currentColor" stroke-width="1.3"/><path d="M14 52c0-13 8-19 18-19s18 6 18 19" stroke="currentColor" stroke-width="1.3"/></svg></div>
+      <div class="agency">KARWAN E MARHABA TRAVEL &amp; TOURS</div>
+      <div class="addr">Near Kanzul Eiman Masjid, Dhak Road, Sukkur<br>071-5620922 · 0315-3470898</div>
+      <div class="status-pill">Confirmed</div>
+    </div>
+    <div class="body">
+      <div class="greet">السلام علیکم</div>
+      <div class="lead">Here are your confirmed booking details from <b>Karwan e Marhaba</b>. Keep this page for your records.</div>
+      <div class="grid">
+        <div class="item"><div class="k">Voucher No.</div><div class="v">fa</div></div>
+        <div class="item"><div class="k">Date Issued</div><div class="v">16-09-26</div></div>
+        <div class="item"><div class="k">Guest Name</div><div class="v">Syed Muhammad Minhajuddin</div></div>
+        <div class="item"><div class="k">Nationality</div><div class="v">Pakistan</div></div>
+      </div>
+      
+    <div class="sechead">Passenger &amp; Passport Details</div>
+    <table class="ptable"><thead><tr><th>#</th><th>Name</th><th>Passport No.</th><th>Type</th></tr></thead><tbody>
+    <tr><td>1</td><td>Syed Muhammad Minhajuddin</td><td class="ppno">AB1234567</td><td>Adult</td></tr>
+    </tbody></table>
+      
+    <div class="sechead">🕋 Makkah Hotel</div>
+    
+      <div style="font-weight:700;color:#1a5c52;font-size:.85rem;margin:10px 0 6px;">Fajr Al Badea 4</div>
+      <div class="seg "><div class="seg-top"><span class="seg-hotel">HCN 55840-1</span><span class="seg-city mak">Triple</span></div><div class="seg-rows"><span>Check-in <b>06-07-26</b></span><span>Check-out <b>08-07-26</b></span><span>Nights <b>2</b></span><span>Pax <b>3</b></span><span>Rooms <b>1</b></span><span>Meal <b>R/O</b></span></div></div>
+    
+      
+      
+      <div class="sechead">Terms &amp; Conditions</div>
+      <ol class="terms"><li>KSA hotel standard check-in / check-out times: Check-in 16:00, Check-out 12:00 (Noon).</li><li>If you choose the transport visa, you must travel using their bus; if you use any other transport, you will be responsible for any penalties.</li><li>If there is an issue with check-in or room due to rush at the hotels, we will provide a similar or upgraded hotel; please remain patient in such situations.</li><li>We assure you the best services and look forward to welcoming you.</li></ol>
+      
+    <div class="contact-dual">
+      <div class="contact-card mak-card">
+        <div class="c-lbl">Contact (Makkah Staff Only)</div>
+        <div class="c-name">Haris</div>
+        <div class="c-num">0580652033</div>
+      </div>
+      
+    </div>
+    </div>
+    <div class="foot">
+      <div class="closing">Thank You and Best Regards</div>
+      
+      <div class="verify">Verified booking record · <b>KARWAN E MARHABA TRAVEL &amp; TOURS</b></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
